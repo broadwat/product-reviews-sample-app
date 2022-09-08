@@ -22,14 +22,14 @@ const notesSchema = {
   content: String,
 };
 const Note = mongoose.model("Note", notesSchema);
-app.post("/", function (req, res) {
+/*app.post("/", function (req, res) {
   let newNote = new Note({
     title: productId,
     content: rating,
   });
   newNote.save();
   //res.redirect("/");
-});
+});*/
 //end of new added
 
 export const addReview = async (client, payload) => {
