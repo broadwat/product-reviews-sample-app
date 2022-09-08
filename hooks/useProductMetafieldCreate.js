@@ -19,7 +19,7 @@ const notesSchema = {
   content: String,
 };
 
-const Note = mongoose.model("Note", notesSchema);
+//const Note = mongoose.model("Note", notesSchema);
 //end of new added
 export const useProductMetafieldCreate = () => {
   const [createProductMetafieldMutation] = useMutation(
