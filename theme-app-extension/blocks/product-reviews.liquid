@@ -7,6 +7,7 @@
 <div class="prapp-block" style="padding: {{ block.settings.padding_y }}px {{ block.settings.padding_x }}px;" data-product-id="{{ block.settings.product.id }}">
   <div class="prapp-summary">
     <div class="prapp-summary__header">
+      <p>test is {{ block.settings.product.metafields.prapp-pub-reviews[0] }}</p>
       <h2 class="prapp-summary__headline">{{ block.settings.heading }}</h2>
       {% if block.settings.allow_unverified_reviews %}
         {% if avg_rating > 0 %}
