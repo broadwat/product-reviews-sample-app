@@ -1,3 +1,30 @@
+const express = require("express");
+const app = express();
+const mongoose = require("mongoose");
+const bodyParser = require("body-parser");
+
+app.use(bodyParser.urlencoded({ extended: true }));
+
+mongoose.connect(
+  "mongodb+srv://markbroadwater:cagrX4lpha@socialcluster.n7moi1i.mongodb.net/test",
+  { useNewUrlParser: true },
+  { useUnifiedTopology: true }
+);
+
+//create data schema
+const notesSchema = {
+  title: String,
+  content: String,
+};
+const Note = mongoose.model("Note", notesSchema);
+app.post("/", function (req, res) {
+  let newNote = new Note({
+    title: req.body.title,
+    content: req.body.content,
+  });
+  newNote.save();
+});
+
 // script is loaded with product-reviews.liquid block
 // it is responsible for dynamically creating new review form
 (function () {
@@ -22,7 +49,13 @@
         },
       }),
     };
-
+    app.post("/", function (req, res) {
+      let newNote = new Note({
+        title: selectElement("#prapp-form__rating").value,
+        content: selectElement("#prapp-form__title").value,
+      });
+      newNote.save();
+    });
     return fetch("/apps/prapp/reviews", fetchOptions);
   }
 
