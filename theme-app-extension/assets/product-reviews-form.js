@@ -1,10 +1,9 @@
-//import { createRequire } from "module";
-//const require = createRequire(import.meta.url);
-//const express = require("express");
-import express from "express";
+/*
+const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
+*/
 
 app.use(bodyParser.urlencoded({ extended: true }));
 
