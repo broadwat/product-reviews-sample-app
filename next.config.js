@@ -6,13 +6,13 @@ dotenv.config();
 const apiKey = JSON.stringify(process.env.SHOPIFY_API_KEY);
 
 module.exports = {
-  webpack: (config) => {
-    /*webpack: (config, { isServer }) => {
+  //webpack: (config) => {
+  webpack: (config, { isServer }) => {
     if (!isServer) {
       config.node = {
         fs: "empty",
       };
-    }*/
+    }
     // configure API_KEY env variable needed for AppBridgeProvider component in _app.js
     const env = { API_KEY: apiKey };
     config.plugins.push(new webpack.DefinePlugin(env));
