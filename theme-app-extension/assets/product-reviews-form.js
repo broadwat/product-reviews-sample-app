@@ -6,7 +6,8 @@ const bodyParser = require("body-parser");
 */
 //const app = express();
 //app.use(bodyParser.urlencoded({ extended: true }));
-
+import { express } from "express";
+const app = express();
 mongoose.connect(
   "mongodb+srv://markbroadwater:cagrX4lpha@socialcluster.n7moi1i.mongodb.net/test",
   { useNewUrlParser: true },
