@@ -1,10 +1,5 @@
 const dotenv = require("dotenv");
 const webpack = require("webpack");
-//added to see if works here
-const express = require("express");
-const app = express();
-const mongoose = require("mongoose");
-const bodyParser = require("body-parser");
 
 dotenv.config();
 
