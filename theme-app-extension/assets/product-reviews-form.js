@@ -3,11 +3,9 @@ const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
+
+app.use(bodyParser.urlencoded({ extended: true }));
 */
-//const app = express();
-//app.use(bodyParser.urlencoded({ extended: true }));
-import { express } from "express";
-const app = express();
 mongoose.connect(
   "mongodb+srv://markbroadwater:cagrX4lpha@socialcluster.n7moi1i.mongodb.net/test",
   { useNewUrlParser: true },
