@@ -116,7 +116,7 @@ const Products = () => {
 
   return (
     <Page
-      title="Reviewed Products"
+      title="Reviewed Product List"
       primaryAction={{
         content: "Create Review",
         onAction: () => setIsPickerOpen(true),
